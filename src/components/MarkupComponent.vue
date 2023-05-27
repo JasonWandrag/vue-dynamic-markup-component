@@ -1,6 +1,6 @@
 <template>
   <template v-if="element.contentType === 'element'">
-    <component :is="element.tagName" v-bind="attributes" :componentID="element.componentID">
+    <component :is="element.tagName" v-bind="attributes" :componentID="element.componentID" :contentEditable="false">
       <template v-if="element.children">
         <MarkupComponent v-for="(child, i) of element.children" :key="i" :element="child" />
       </template>
@@ -9,7 +9,7 @@
   <template v-else>
     {{ element.tagText }}
   </template>
-</template>
+</template>s
 <script setup lang="ts">
 const props = defineProps({
   element: { type: Object as any, required: true }
