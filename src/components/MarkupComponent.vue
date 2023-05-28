@@ -9,7 +9,7 @@
   <template v-else>
     {{ element.tagText }}
   </template>
-</template>s
+</template>
 <script setup lang="ts">
 const props = defineProps({
   element: { type: Object as any, required: true }
